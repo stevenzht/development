@@ -18,13 +18,13 @@ public class CustomerForQuery {
     @Test
     public void testQueryForCustomers(){
         String sql = "select id,name,birth,email from customers where id = ?";
-        Customer customer = queryForCustomers(sql,13);
+
         System.out.println(customer);
     }
 
 
     /**
-     * 针对于customers表的通用操作
+     * 针对于customers表的通用操作 Customer customer = queryForCustomers(sql,13);
      */
     public Customer queryForCustomers(String sql,Object...args) {
         Connection conn = null;
